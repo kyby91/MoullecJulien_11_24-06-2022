@@ -1,18 +1,18 @@
 import './App.css';
 
 import Banner from './components/Banner' ;
+import SmallPoster from './components/SmallPoster';
+import Card from './components/Card';
+
 
 function App() {
   return (
     <div className="App">
       <Banner />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <div className="App-info">
-          <p>Accueil</p>
-          <p>A propos</p>
-        </div>        
-      </header> */}
+      <SmallPoster/>
+      <div className="App-holder">
+        <Card/><Card/><Card/>
+      </div>
     </div>
   );
 }

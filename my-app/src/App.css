@@ -5,24 +5,54 @@
   width: 85%;
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .App-header{
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  margin-bottom: 30px;
+  width: 1240px;
 }
 
-.App-logo{
-  margin-left: 100px;
-}
 
 .App-info{
   display: flex;
-  margin-right: 50px;
   justify-content: space-between;
-  width: 15%;
   align-items: center;
+  width: 300px;
 }
 
 .App-info>p{
   color: #FF6060;
+}
+
+.App-SmallPoster{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.SmallPoster{
+  background-color: #FF6060;
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+}
+
+.App-holder{
+  background-color: aquamarine;
+  width: 1240px;
+}
+
+.Card{
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  background-color: blue;
 }

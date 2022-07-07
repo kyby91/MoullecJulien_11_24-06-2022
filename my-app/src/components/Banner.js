@@ -5,8 +5,8 @@ function Banner(){
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
             <div className="App-info">
-            <p>Accueil</p>
-            <p>A propos</p>
+                <p>Accueil</p>
+                <p>A propos</p>
             </div>        
         </header>
     );

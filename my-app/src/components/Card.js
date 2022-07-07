@@ -1,8 +1,9 @@
-function Card(){
+function Card(props){
     return(
         <div className="Card">
-            <img></img>
-            <p>Titre de la location</p>
+            <img src={props.src} alt={props.title}></img>
+            <p>{props.title}</p>
+            <p>{props.children}</p>
         </div>
     )
 }

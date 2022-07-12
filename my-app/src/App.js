@@ -5,7 +5,7 @@ import SmallPoster from './components/SmallPoster';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import BigPoster from './components/BigPoster';
-import Dropdown from './components/Dropdown';
+import Accordion from './components/Accordion';
 
 import logement from './data/logement.json';
 
@@ -23,7 +23,7 @@ function App() {
         {/* <Card/><Card/><Card/><Card/> */}
       </div>
       <BigPoster/>
-      <Dropdown/>
+      <Accordion/>
       <Footer/>
     </div>
   );

@@ -5,9 +5,9 @@ import SmallPoster from './components/SmallPoster';
 import Card from './components/Card';
 import Footer from './components/Footer';
 import BigPoster from './components/BigPoster';
-import Dropdown from './components/Dropdown';
+import Accordion from './components/Accordion';
 
-function App() {
+function Home() {
   return (
     <div className="App">
       <Banner />
@@ -16,12 +16,12 @@ function App() {
         <Card/><Card/><Card/><Card/><Card/>
       </div>
       <BigPoster/>
-      <Dropdown/>
+      <Accordion/>
       <Footer/>
     </div>
   );
 }
 
-export default App;
+export default Home;
 
 

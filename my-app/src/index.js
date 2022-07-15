@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import Home from './home';
+import Banner from './components/Banner' ;
+import './App.css';
+import Footer from './components/Footer';
+import Home from './views/home';
 import App from './App';
-// import Error from './Error';
+import Error from './views/Error';
 import reportWebVitals from './reportWebVitals';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-        <App/>
-
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/app' element={<App/>}/>
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 

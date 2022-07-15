@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat-Regular.ttf");
+}
+
+
+
 .ok{
   color: #FF6060;
   font-size: 80px;
@@ -5,11 +12,12 @@
   width: 85%;
 }
 
-.App{
+body{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Montserrat";
 }
 
 .App-header{
@@ -46,7 +54,7 @@
 }
 
 .App-holder{
-  background-color: aquamarine;
+  background-color: #F6F6F6;
   width: 1240px;
   display: flex;
   justify-content: space-around;
@@ -62,6 +70,13 @@
   background-color: blue;
   margin-top: 56px;
   position: relative;
+}
+
+.Card>img{
+  object-fit: cover;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
 }
 
 .Card>p{
@@ -113,6 +128,13 @@ section{
   margin-top: 2rem;
   padding-bottom: 1rem;
   cursor: pointer;
+}
+
+.accordionpropos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1000px;
 }
 
 .contentBox{
@@ -176,4 +198,25 @@ padding: 18px;
   border-radius: 10px;
   color: #FFFFFF;
   text-align: center;
+}
+
+.error-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FF6060;
+}
+
+.error-404{
+  font-size: 288px;
+  font-weight: bolder;
+}
+
+.error-content{
+  font-size: 36px;
+}
+
+.error-home{
+  font-size: 18px;
+  margin-top: 310px;
 }

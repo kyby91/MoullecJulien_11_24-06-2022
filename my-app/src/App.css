@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("/font/Montserrat-Regular.ttf");
+  src: url("./font/Montserrat-Regular.ttf");
 }
 
 
@@ -36,8 +36,13 @@ body{
   width: 300px;
 }
 
-.App-info>p{
+.App-info>Link{
   color: #FF6060;
+}
+
+.App-info>Link:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .App-SmallPoster{
@@ -46,30 +51,53 @@ body{
   margin-bottom: 30px;
 }
 
-.SmallPoster{
-  background-color: #FF6060;
+.SmallPoster1{
   width: 1240px;
   height: 223px;
   border-radius: 25px;
+  background-image: url('./data/home.png');
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #FFFFFF;
+  font-size: 48px;
 }
+
+.SmallPoster2{
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+  background-image: url('./data/apropos.png');
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #FFFFFF;
+  font-size: 48px;
+}
+
+.SmallPoster>p{
+  size: 48px;
+}
+
 
 .App-holder{
   background-color: #F6F6F6;
-  width: 1240px;
+  max-width: 1240px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   border-radius: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  padding-top: 13px;
+  padding-bottom: 56px;
 }
 
 .Card{
   height: 340px;
   width: 340px;
   border-radius: 10px;
-  background-color: blue;
-  margin-top: 56px;
   position: relative;
+  margin-top: 43px;
 }
 
 .Card>img{
@@ -134,7 +162,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 1000px;
+  margin-bottom: 20px;
 }
 
 .contentBox{
@@ -155,6 +183,8 @@ section{
   align-items: center;
   background-color: #FF6060;
   border-radius: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
 .question>h3{
@@ -182,8 +212,6 @@ padding: 18px;
 }
 
 .content{
-  /* max-height: 0;
-  overflow: hidden; */
   overflow: hidden;
 }
 
@@ -219,4 +247,10 @@ padding: 18px;
 .error-home{
   font-size: 18px;
   margin-top: 310px;
+}
+
+.reverse{
+  transform: rotate(180deg);
+  position: absolute;
+  right: 20px;
 }

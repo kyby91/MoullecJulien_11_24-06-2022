@@ -1,23 +1,23 @@
 import '../App.css';
 
-import Banner from '../components/Banner' ;
 import SmallPoster from '../components/SmallPoster';
 import Card from '../components/Card';
-import Footer from '../components/Footer';
-import BigPoster from '../components/BigPoster';
-import Accordion from '../components/Accordion';
+import logement from '../data/logement.json';
+import { Link } from 'react-router-dom';
 
 function Home() {
+
+  const data = logement;
+  const name = "SmallPoster1"
+  const text = "Chez vous, partout et ailleurs"
+
   return (
+    
     <div className="App">
-      <Banner />
-      <SmallPoster/>
+      <SmallPoster class={name} content={text}/>
       <div className="App-holder">
-        <Card/><Card/><Card/><Card/><Card/>
+        {data.map(elm => <Link key={elm.id} to={`/logement/${elm.id}`}><Card src={elm.cover} title={elm.title}/></Link>)}
       </div>
-      <BigPoster/>
-      <Accordion/>
-      <Footer/>
     </div>
   );
 }

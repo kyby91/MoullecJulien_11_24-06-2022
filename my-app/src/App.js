@@ -9,10 +9,12 @@ import Tags from './components/Tags';
 import Problem from './components/Problem';
 
 import logement from './data/logement.json';
+import apropos from './data/apropos.json';
 
 function App() {
 
   const data = logement
+  const faq = apropos
   return (
     <div className="App">
       <SmallPoster/>
@@ -21,8 +23,8 @@ function App() {
       </div>
       <BigPoster/>
       <Tags/>
+      {faq.map(elm => <AccordionPropos title={elm.title} content={elm.content}/>)}
       <Accordion isOpenElt={true}/>
-      <AccordionPropos/>
       <Problem/>
     </div>
   );

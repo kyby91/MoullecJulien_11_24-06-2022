@@ -1,7 +1,9 @@
-function SmallPoster(){
+function SmallPoster(props){
     return (
         <div className="App-SmallPoster">
-        <div className="SmallPoster"></div>
+        <div className={props.class}>
+            <p>{props.content}</p>
+        </div>
         </div>
     );
 }

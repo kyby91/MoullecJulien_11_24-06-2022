@@ -3,7 +3,7 @@ import vector from '../assets/Vector.png';
 
 
 
-function Accordion({isOpenElt}){
+function Accordion(props){
 
     // const accordion= document.querySelectorAll(".contentBox");
     // console.log(accordion);
@@ -14,7 +14,7 @@ function Accordion({isOpenElt}){
     //     })
     // })
 
-    const [isOpen, setIsOpen] = useState(isOpenElt)
+    const [isOpen, setIsOpen] = useState(true)
 
     const toggleAccordion = (e) =>{
         isOpen ? setIsOpen(false) : setIsOpen(true);
@@ -29,17 +29,21 @@ function Accordion({isOpenElt}){
     <section>
         <div className="accordion">
             <div className="contentBox">
-                <div className="question">
-                    <h3>Description</h3>
-                    <img src={vector} alt="vector" onClick={ () => toggleAccordion()}/> 
+                <div className="question" onClick={ () => toggleAccordion()}>
+                    <h3>{props.name}</h3>
+                    {isOpen ?
+                        <img src={vector} alt="vector" />  : <img className="reverse" src={vector} alt="vector" />
+                }
+                    
                 </div>
                 {isOpen ?
                         <div className="content">
-                            <p>Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte.</p>
+                            <p>{props.description}</p>
                         </div> : null
                 }
                 
             </div>
+            
         </div>
     </section>
     );

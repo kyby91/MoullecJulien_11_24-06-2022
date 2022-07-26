@@ -1,6 +1,6 @@
-function Tags(){
+function Tags(props){
     return (
-        <div className="tags">Cozy</div>
+        <div className="tags">{props.tags}</div>
     );
 }
 

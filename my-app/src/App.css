@@ -137,15 +137,38 @@ body{
 }
 
 .App-BigPoster{
-  background-color: #FF6060;
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.lightbox{
+  object-fit: cover;
   width: 1240px;
   height: 415px;
   border-radius: 25px;
 }
 
+.arrowLeft, .arrowRight{
+  width: 80px;
+  height: 47px;
+  position: absolute;
+  top: 180px;
+  cursor: pointer;
+}
+
+.arrowLeft{
+  transform: rotate(90deg);
+  left: 10px;
+}
+
+.arrowRight{
+  right: 10px;
+  transform: rotate(-90deg);
+}
+
 section{
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -204,8 +227,10 @@ section{
 
 .content>p{
 padding-top: 1rem;
-line-height: 1.6;
-font-size: 1.4rem;
+line-height: 142.6%;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
 word-wrap: break-word;
 color: #FF6060;
 padding: 18px;
@@ -213,6 +238,7 @@ padding: 18px;
 
 .content{
   overflow: hidden;
+  height: 320px;
 }
 
 .accordion.active .content{
@@ -220,12 +246,22 @@ padding: 18px;
 }
 
 .tags{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 115px;
   height: 25px;
   background-color: #FF6060;
   border-radius: 10px;
   color: #FFFFFF;
   text-align: center;
+  font-size: 12px;
+  margin-right: 12px;
+}
+
+.tags-holder{
+  display: flex;
+  flex-direction: row;
 }
 
 .error-container{
@@ -253,4 +289,53 @@ padding: 18px;
   transform: rotate(180deg);
   position: absolute;
   right: 20px;
+}
+
+.accordion-holder{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.info{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #FF6060;
+  align-items: center;
+  margin-bottom: -22px;
+}
+
+.info>h2{
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.info-location{
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  color: #FF6060;
+}
+
+.info-name{
+  display: flex;
+  align-items: center;
+}
+
+.info-name>img{
+  border-radius: 40px;
+  height: 64px;
+  width: 64px;
+}
+
+.info-name>p{
+  width: 70px;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 10px;
 }

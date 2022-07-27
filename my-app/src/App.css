@@ -36,11 +36,12 @@ body{
   width: 300px;
 }
 
-.App-info>Link{
+.App-info>a{
   color: #FF6060;
+  text-decoration: none;
 }
 
-.App-info>Link:hover{
+.App-info>a:hover{
   text-decoration: underline;
   cursor: pointer;
 }
@@ -141,6 +142,13 @@ body{
   height: 415px;
   border-radius: 25px;
   position: relative;
+}
+
+.position{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #FFFFFF;
 }
 
 .lightbox{
@@ -338,4 +346,15 @@ padding: 18px;
   align-items: flex-end;
   text-align: right;
   padding-right: 10px;
+}
+
+.info-short{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.star{
+  padding-left: 10px;
 }

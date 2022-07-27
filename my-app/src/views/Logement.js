@@ -1,4 +1,6 @@
 import '../App.css';
+import StarRed from '../assets/StarRed.png';
+import StarWhite from '../assets/StarWhite.png';
 
 import { useParams} from 'react-router-dom';
 import Accordion from '../components/Accordion';
@@ -18,25 +20,31 @@ const Logement = () => {
   const currentData = data.find(findId)
   const gallery = currentData.pictures
   let rate = currentData.rating
-  console.log(rate);
+  console.log(gallery);
   
-  // const dataPciture = 
 
-  for (let i = 0; i < 5; i++) {
-    if (rate>0) {
-      rate --
-    } else {
-      console.log('finit');
-
+  let render = ()=> {
+    const items = []
+    for (let i = 0; i < 5; i++) {
+      if (rate>0) {
+        rate--
+        items.push(<img src={StarRed} className="star" alt="logo" key={items}/>)
+      } else {
+        items.push(<img src={StarWhite} className="star" alt="logo" key={items}/>)
+      }
+      
     }
-    
+    return(
+      <div>{items}</div>
+    )
   }
+  
     
     
 
   return (
     <div className="App">
-      <BigPoster src={gallery[0]}/>
+      <BigPoster src={gallery}/>
       <div className="info">
         <h2>{currentData.title}</h2>
         <div className='info-name'>
@@ -45,9 +53,11 @@ const Logement = () => {
         </div>
       </div>
       <div className='info-location'>{currentData.location}</div>
-      <div>
+      <div className='info-short'>
         <div className='tags-holder'>{currentData.tags.map(elm => <Tags key={elm} tags={elm}/>)}</div>
-        <div></div>
+        <div>
+          {render()}
+        </div>
       </div>
       <div className="accordion-holder">
         <Accordion name={'Description'} description={currentData.description}/>

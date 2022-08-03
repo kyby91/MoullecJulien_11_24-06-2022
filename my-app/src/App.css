@@ -5,12 +5,6 @@
 
 
 
-.ok{
-  color: #FF6060;
-  font-size: 80px;
-  margin-left: 60px;
-  width: 85%;
-}
 
 body{
   display: flex;
@@ -18,6 +12,31 @@ body{
   justify-content: center;
   align-items: center;
   font-family: "Montserrat";
+  margin: 0 10px 0 10px;
+}
+
+#root{
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Apropos-holder{
+  max-width: 1023px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .App-header{
@@ -25,7 +44,8 @@ body{
   justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 30px;
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
 }
 
 
@@ -50,10 +70,12 @@ body{
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .SmallPoster1{
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   height: 223px;
   border-radius: 25px;
   background-image: url('./data/home.png');
@@ -65,7 +87,8 @@ body{
 }
 
 .SmallPoster2{
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   height: 223px;
   border-radius: 25px;
   background-image: url('./data/apropos.png');
@@ -93,9 +116,14 @@ body{
   padding-bottom: 56px;
 }
 
+.App-holder>a{
+  width: 30%;
+  max-width: 340px;
+}
+
 .Card{
   height: 340px;
-  width: 340px;
+  max-width: 340px;
   border-radius: 10px;
   position: relative;
   margin-top: 43px;
@@ -103,8 +131,8 @@ body{
 
 .Card>img{
   object-fit: cover;
-  height: 340px;
-  width: 340px;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -118,11 +146,12 @@ body{
 .Footer{
   height: 209px;
   background-color: black;
-  width: 1240px;
+  max-width: 1240px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px -10px 0 -10px;
+  width: 100%;
 }
 
 .Footer>img{
@@ -137,8 +166,13 @@ body{
   font-size: 24px;
 }
 
+.logement{
+  width: 100%;
+}
+
 .App-BigPoster{
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
   height: 415px;
   border-radius: 25px;
   position: relative;
@@ -160,7 +194,7 @@ body{
 
 .arrowLeft, .arrowRight{
   width: 80px;
-  height: 47px;
+  height: 40px;
   position: absolute;
   top: 180px;
   cursor: pointer;
@@ -179,14 +213,15 @@ body{
 section{
   display: flex;
   flex-direction: column;
+  width: 48%;
   align-items: center;
-
 }
 
 .accordion{
   margin-top: 2rem;
   padding-bottom: 1rem;
   cursor: pointer;
+  width: 100%;
 }
 
 .accordionpropos{
@@ -194,19 +229,26 @@ section{
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .contentBox{
-  width: 582px;
+  max-width: 582px;
   background-color: #F6F6F6;
   border-radius: 10px;
 }
 
 .contentPropos{
-  width: 1023px;
+  max-width: 1023px;
   background-color: #F6F6F6;
   border-radius: 10px;
+  width: 100%;
 }
+
+.apropos{
+  width: 100%;
+}
+
 .question{
   display: flex;
   flex-direction: row;
@@ -246,7 +288,6 @@ padding: 18px;
 
 .content{
   overflow: hidden;
-  height: 320px;
 }
 
 .accordion.active .content{
@@ -277,11 +318,22 @@ padding: 18px;
   flex-direction: column;
   align-items: center;
   color: #FF6060;
+  margin-top: 100px;
+}
+
+.error-container>a{
+  color: #FF6060;
+  text-decoration: none;
+}
+
+.error-container>a:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .error-404{
   font-size: 288px;
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 .error-content{
@@ -290,7 +342,7 @@ padding: 18px;
 
 .error-home{
   font-size: 18px;
-  margin-top: 310px;
+  margin-top: 280px;
 }
 
 .reverse{
@@ -304,15 +356,23 @@ padding: 18px;
   flex-direction: row;
   list-style: none;
   justify-content: space-between;
+  width: 100%;
 }
 
 .info{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin-top: 20px;
   color: #FF6060;
-  align-items: center;
-  margin-bottom: -22px;
+  align-items: flex-start;
+}
+
+.info-holder{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .info>h2{
@@ -327,6 +387,7 @@ padding: 18px;
   font-style: normal;
   font-weight: 500;
   color: #FF6060;
+  margin-top: -18px;
 }
 
 .info-name{
@@ -346,15 +407,172 @@ padding: 18px;
   align-items: flex-end;
   text-align: right;
   padding-right: 10px;
+  color: #FF6060;
 }
 
 .info-short{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .star{
   padding-left: 10px;
+}
+.star-holder{
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 960px) {
+  
+  body{
+    margin: 0 20px 0 20px;
+  }
+
+  #root{
+    width: 100%;
+  }
+
+  .App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .App-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .App-logo{
+    width: 30%;
+  }
+
+  .App-info{
+    width: 35%;
+    justify-content: space-between;
+  }
+
+  .App-info>a{
+    font-size: 2vh;
+  }
+
+  .App-SmallPoster{
+    width: 100%;
+  }
+
+  .SmallPoster1{
+    font-size: 2em;
+  }
+
+  .SmallPoster1>img{
+    height: 90%;
+  }
+
+  .App-holder{
+    width: 100%;
+    background-color: unset;
+  }
+
+  .App-holder>a{
+    width: 100%;
+    max-width: unset;
+  }
+
+  .Card{
+    width: 100%;
+    max-width: unset;
+  }
+
+  .Card>img{
+    width: 100%;
+  }
+
+  .Footer{
+    margin: 0 -20px 0 -20px;
+  }
+
+  .Footer>p{
+    font-size: 1em;
+  }
+
+  .error-404{
+    font-size: 7em;
+  }
+
+  .error-content{
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .error-home{
+    margin-top: 180px;
+    margin-bottom: 250px;
+  }
+
+  .position{
+    display: none;
+  }
+
+  .arrowLeft, .arrowRight{
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    top: 200px;
+    cursor: pointer;
+  }
+
+  
+
+  
+
+  .info-holder{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info-short{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .info-name{
+    order: 2;
+  }
+
+  .star-holder{
+    order: 1;
+    margin-top: unset;
+  }
+
+  .info>h2{
+    font-size: 25px;
+  }
+
+  .info-location{
+    margin-top: unset;
+  }
+
+  .accordion-holder{
+    margin-bottom: 40px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  
+  .App-info{
+    width: 50%;
+  }
+
+  .SmallPoster1>p{
+    font-size: 0.8em;
+    text-align: start;
+  }
+
 }

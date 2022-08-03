@@ -14,7 +14,7 @@ function Accordion(props){
     //     })
     // })
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
 
     const toggleAccordion = (e) =>{
         isOpen ? setIsOpen(false) : setIsOpen(true);
@@ -32,7 +32,7 @@ function Accordion(props){
                 <div className="question" onClick={ () => toggleAccordion()}>
                     <h3>{props.name}</h3>
                     {isOpen ?
-                        <img src={vector} alt="vector" />  : <img className="reverse" src={vector} alt="vector" />
+                           <img className="reverse" src={vector} alt="vector" />:<img src={vector} alt="vector" />
                 }
                     
                 </div>

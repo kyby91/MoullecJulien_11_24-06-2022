@@ -11,7 +11,8 @@ function Apropos() {
   return (
     <div className="App">
       <SmallPoster class={name}/>
-      {faq.map(elm => <AccordionPropos title={elm.title} content={elm.content}/>)}
+      <div className='Apropos-holder'>{faq.map(elm => <AccordionPropos title={elm.title} content={elm.content}/>)}</div>
+      
     </div>
   );
 }

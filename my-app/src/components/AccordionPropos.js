@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 function AccordionPropos(props){
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
 
     const toggleAccordion = (e) =>{
         isOpen ? setIsOpen(false) : setIsOpen(true);
@@ -11,7 +11,7 @@ function AccordionPropos(props){
     }
 
     return (
-    <section>
+    <div className='apropos'>
         <div className="accordionpropos">
             <div className="contentPropos">
                 <div className="question" onClick={ () => toggleAccordion()}>
@@ -25,7 +25,7 @@ function AccordionPropos(props){
                 }
             </div>
         </div>
-    </section>
+    </div>
     );
 }
 

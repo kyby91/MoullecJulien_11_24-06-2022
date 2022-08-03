@@ -35,7 +35,7 @@ const Logement = () => {
       
     }
     return(
-      <div>{items}</div>
+      <div className='star-holder'>{items}</div>
     )
   }
   
@@ -43,22 +43,24 @@ const Logement = () => {
     
 
   return (
-    <div className="App">
+    <div className='logement'>
       <BigPoster src={gallery}/>
-      <div className="info">
-        <h2>{currentData.title}</h2>
-        <div className='info-name'>
-          <p>{currentData.host.name}</p>
-          <img src={currentData.host.picture} alt="Profile"></img>
+      <div className='info-holder'>
+        <div className="info">
+          <h2>{currentData.title}</h2>
+          <div className='info-location'>{currentData.location}</div>
+          <div className='tags-holder'>{currentData.tags.map(elm => <Tags key={elm} tags={elm}/>)}</div>        
+        </div>
+      
+        <div className='info-short'>
+          <div className='info-name'>
+            <p>{currentData.host.name}</p>
+            <img src={currentData.host.picture} alt="Profile"></img>
+          </div>
+          {render()} 
         </div>
       </div>
-      <div className='info-location'>{currentData.location}</div>
-      <div className='info-short'>
-        <div className='tags-holder'>{currentData.tags.map(elm => <Tags key={elm} tags={elm}/>)}</div>
-        <div>
-          {render()}
-        </div>
-      </div>
+      
       <div className="accordion-holder">
         <Accordion name={'Description'} description={currentData.description}/>
         <Accordion name={'Équipements'} description={currentData.equipments.map(elm => <li key={elm}>{elm}</li>)}/>

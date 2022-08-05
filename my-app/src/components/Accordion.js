@@ -24,7 +24,7 @@ function Accordion(props){
 
     // console.log(isOpen, isOpenElt)
 
-
+    //{propos.taille === light && "classLigth"}
     return (
     <section>
         <div className="accordion">

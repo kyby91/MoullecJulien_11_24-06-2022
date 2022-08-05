@@ -2,7 +2,7 @@ import '../App.css';
 import StarRed from '../assets/StarRed.png';
 import StarWhite from '../assets/StarWhite.png';
 
-import { useParams} from 'react-router-dom';
+import { Navigate, useParams} from 'react-router-dom';
 import Accordion from '../components/Accordion';
 import BigPoster from '../components/BigPoster';
 import Tags from '../components/Tags';
@@ -18,9 +18,17 @@ const Logement = () => {
   const {logementId} = useParams()
   const data = logement;
   const currentData = data.find(findId)
+ 
+  console.log(currentData)
+
+  if(!currentData){
+    return <Navigate to='/404'/>
+  }
+
   const gallery = currentData.pictures
   let rate = currentData.rating
   console.log(gallery);
+
   
 
   let render = ()=> {

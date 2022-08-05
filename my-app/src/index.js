@@ -6,7 +6,6 @@ import './App.css';
 import Footer from './components/Footer';
 import Home from './views/home';
 import Logement from './views/Logement';
-import App from './App';
 import Error from './views/Error';
 import reportWebVitals from './reportWebVitals';
 import Apropos from './views/Apropos'
@@ -19,7 +18,6 @@ root.render(
       <Banner/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/app' element={<App/>}/>
         <Route path='/apropos' element={<Apropos/>}/>
         <Route path='/logement/:logementId' element={<Logement/>}/>
         <Route path="*" element={<Error />} />

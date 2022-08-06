@@ -4,7 +4,9 @@
 }
 
 
-
+br{
+  display: none;
+}
 
 body{
   display: flex;
@@ -16,7 +18,6 @@ body{
 
 #root{
   width: 100%;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,6 +37,10 @@ body{
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
+}
+
+.Apropos-holder>section{
+margin-top: 33px;
 }
 
 .App-header{
@@ -68,7 +73,6 @@ body{
 .App-SmallPoster{
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
   width: 100%;
 }
 
@@ -83,13 +87,17 @@ body{
   display: flex;
   color: #FFFFFF;
   font-size: 48px;
-  
+  background: #000000;
 }
 
 .SmallPoster1>img{
-  background: #000000;
-  mix-blend-mode: darken;
-  opacity: 0.3;
+  opacity: 0.8;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.SmallPoster1>p{
+  position: absolute;
 }
 
 .SmallPoster2{
@@ -97,12 +105,19 @@ body{
   width: 100%;
   height: 223px;
   border-radius: 25px;
-  background-image: url('./data/apropos.png');
+  /* background-image: url('./data/apropos.png'); */
   justify-content: center;
   align-items: center;
   display: flex;
   color: #FFFFFF;
   font-size: 48px;
+  background: #000000;
+}
+
+.SmallPoster2>img{
+  opacity: 0.8;
+  overflow: hidden;
+  border-radius: 25px;
 }
 
 .SmallPoster>p{
@@ -111,15 +126,20 @@ body{
 
 
 .App-holder{
-  background-color: #F6F6F6;
-  max-width: 1240px;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  border-radius: 25px;
-  margin-bottom: 50px;
-  padding-top: 13px;
-  padding-bottom: 56px;
+  justify-content: space-between;
+  padding: 56px 50px 6px 50px;
+}
+
+.App-container{
+  width: 1240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;  
+  background-color: #F6F6F6;
+  margin-top: 43px;
 }
 
 .App-holder>a{
@@ -132,7 +152,15 @@ body{
   max-width: 340px;
   border-radius: 10px;
   position: relative;
-  margin-top: 43px;
+  margin-bottom: 50px;
+}
+
+.Card>div{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .Card>img{
@@ -152,7 +180,6 @@ body{
 .Footer{
   height: 209px;
   background-color: black;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,6 +201,7 @@ body{
 
 .logement{
   width: 100%;
+  max-width: 1240px;
 }
 
 .App-BigPoster{
@@ -219,40 +247,25 @@ body{
 section{
   display: flex;
   flex-direction: column;
-  width: 48%;
   align-items: center;
 }
 
 .accordion{
-  margin-top: 2rem;
-  padding-bottom: 1rem;
   cursor: pointer;
-  width: 100%;
+  width: 582px;
 }
 
-.accordionpropos{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  width: 100%;
-}
+
 
 .contentBox{
-  max-width: 582px;
   background-color: #F6F6F6;
   border-radius: 10px;
 }
 
-.contentPropos{
-  max-width: 1023px;
-  background-color: #F6F6F6;
-  border-radius: 10px;
-  width: 100%;
-}
+
 
 .apropos{
-  width: 100%;
+  width: 1023px;
 }
 
 .question{
@@ -296,9 +309,7 @@ padding: 18px;
   overflow: hidden;
 }
 
-.accordion.active .content{
-  max-height: 300px;
-}
+
 
 .tags{
   display: flex;
@@ -348,7 +359,7 @@ padding: 18px;
 
 .error-home{
   font-size: 18px;
-  margin-top: 280px;
+  margin-top: 182px;
 }
 
 .reverse{
@@ -363,6 +374,7 @@ padding: 18px;
   list-style: none;
   justify-content: space-between;
   width: 100%;
+  margin-top: 26px;
 }
 
 .info{
@@ -371,6 +383,7 @@ padding: 18px;
   justify-content: space-between;
   color: #FF6060;
   align-items: flex-start;
+  height: 122px;
 }
 
 .info-holder{
@@ -378,22 +391,23 @@ padding: 18px;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-top: 30px;
 }
 
 .info>h2{
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
+  margin-top: 0;
+  margin-bottom: -24px;
 }
 
 .info-location{
-  margin-bottom: 20px;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   color: #FF6060;
-  margin-top: -18px;
 }
 
 .info-name{
@@ -429,7 +443,7 @@ padding: 18px;
   margin-top: 18px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 375px) {
   
   body{
     margin: 0 20px 0 20px;
@@ -448,38 +462,61 @@ padding: 18px;
   .App-header{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 20px;
   }
 
   .App-logo{
-    width: 30%;
+    width: 145px;
+    height: 47px;
   }
 
   .App-info{
-    width: 35%;
     justify-content: space-between;
   }
 
   .App-info>a{
-    font-size: 2vh;
+    font-size: 12px;
+    margin-left: 10px;
+    text-transform: uppercase;
   }
 
   .App-SmallPoster{
-    width: 100%;
+    width: 335px;
   }
 
   .SmallPoster1{
-    font-size: 2em;
+    height: 111px;
+    border-radius: 10px;
+    position: relative;
   }
 
   .SmallPoster1>img{
-    height: 90%;
+    height: 111px;
+    border-radius: 10px;
+  }
+
+  .SmallPoster1>p{
+    left: 16px;
+    font-size: 24px;
+    line-height: 24px;
+    word-wrap: break-word;
+    width: 335px;
+  }
+
+  br{
+    display: block;
+  }
+
+  .App-container{
+    width: unset;
+    background-color: unset;
+    margin-top: 22px;
   }
 
   .App-holder{
     width: 100%;
     background-color: unset;
+    padding: unset;
   }
 
   .App-holder>a{
@@ -490,6 +527,8 @@ padding: 18px;
   .Card{
     width: 100%;
     max-width: unset;
+    height: 255px;
+    margin-bottom: 20px;
   }
 
   .Card>img{
@@ -498,6 +537,7 @@ padding: 18px;
 
   .Footer{
     margin: 0 -20px 0 -20px;
+    width: 375px;
   }
 
   .Footer>p{
@@ -505,17 +545,22 @@ padding: 18px;
   }
 
   .error-404{
-    font-size: 7em;
+    font-size: 96px;
   }
 
   .error-content{
-    font-size: 1.5em;
+    font-size: 18px;
     text-align: center;
+    width: 280px;
+  }
+
+  .error-container{
+    margin-top: 195px;
   }
 
   .error-home{
-    margin-top: 180px;
-    margin-bottom: 250px;
+    margin-top: 133px;
+    margin-bottom: 235px;
   }
 
   .position{
@@ -531,12 +576,21 @@ padding: 18px;
   }
 
   
+  .SmallPoster2>img{
+    height: 100%;
+    object-fit: cover;
+  }
 
+  .info{
+    justify-content: unset;
+    height: unset;
+  }
   
 
   .info-holder{
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 15px;
   }
 
   .info-short{
@@ -544,11 +598,20 @@ padding: 18px;
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 17px;
   }
 
   .info-name{
     order: 2;
+  }
+
+  .info-name>img{
+    width: 32px;
+    height: 32px;
+  }
+
+  .info-name>p{
+    font-size: 12px;
   }
 
   .star-holder{
@@ -557,28 +620,82 @@ padding: 18px;
   }
 
   .info>h2{
-    font-size: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 5px;
   }
 
   .info-location{
     margin-top: unset;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .tags{
+    font-size: 10px;
+    width: 84px;
+  }
+
+  .tags-holder{
+    flex-wrap: wrap;
+  }
+
+  .star{
+    width: 15px;
+    padding-left: 5px;
   }
 
   .accordion-holder{
     margin-bottom: 40px;
+    flex-direction: column;
   }
 
-}
-
-@media screen and (max-width: 600px) {
-  
-  .App-info{
-    width: 50%;
+  .accordion-holder>section{
+    margin-bottom: 20px;
   }
 
-  .SmallPoster1>p{
-    font-size: 0.8em;
-    text-align: start;
+  .accordion{
+    width: 335px;
+  }
+
+  .apropos{
+    width: 335px;
+  }
+
+  .question{
+    height: 30px;
+  }
+
+  .question>h3{
+    font-size: 13px;
+    padding-left: 11.51px;
+  }
+
+  .question>img{
+    width: 22px;
+    height: 13px;
+    padding-right: 6.73px;
+  }
+
+  .Apropos-holder{
+    margin-top: 19px;
+  }
+
+  .Apropos-holder>section{
+    margin-top: unset;
+    margin-bottom: 20px;
+  }
+
+  .content>p{
+    font-size: 12px;
+  }
+
+  .App-BigPoster{
+    height: 255px;
+  }
+
+  .arrowLeft, .arrowRight{
+    top: 119px;
   }
 
 }

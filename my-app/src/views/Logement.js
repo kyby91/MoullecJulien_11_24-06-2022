@@ -19,7 +19,6 @@ const Logement = () => {
   const data = logement;
   const currentData = data.find(findId)
  
-  console.log(currentData)
 
   if(!currentData){
     return <Navigate to='/404'/>
@@ -27,7 +26,6 @@ const Logement = () => {
 
   const gallery = currentData.pictures
   let rate = currentData.rating
-  console.log(gallery);
 
   
 
@@ -70,8 +68,8 @@ const Logement = () => {
       </div>
       
       <div className="accordion-holder">
-        <Accordion name={'Description'} description={currentData.description}/>
-        <Accordion name={'Équipements'} description={currentData.equipments.map(elm => <li key={elm}>{elm}</li>)}/>
+        <Accordion name={'Description'} description={currentData.description} type='accordion'/>
+        <Accordion name={'Équipements'} type='accordion' description={currentData.equipments.map(elm => <li key={elm}>{elm}</li>)}/>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
-import data from '../data/home.png'
+
 
 function SmallPoster(props){
     return (
         <div className="App-SmallPoster">
         <div className={props.class}>
-            <img src={data} alt=''></img>
-            <p>{props.content}</p>
+            <img src={props.src} alt=''></img>
+            {props.content}
         </div>
         </div>
     );
